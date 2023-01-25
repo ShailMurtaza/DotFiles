@@ -39,6 +39,7 @@ _comp_options+=(globdots)		# Include hidden files.
 # End of lines added by compinstall
 alias vi="vim"
 alias ls="lsd"
+alias screenshot="mate-screenshot -i"
 PROMPT='%(?.%F{blue}√.%F{red}?%?)%f %B%F{240}%1~%f%b $ '
 
 

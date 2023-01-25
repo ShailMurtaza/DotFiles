@@ -2,7 +2,8 @@
 ! Description: Light theme inspired by old vaporwave concept art (WCAG AA compliant)
 ! Author: Protesilaos Stavrou (https://protesilaos.com)
 xterm*background: #000000
-xterm*foreground: #53545b
+! xterm*foreground: #53545b
+xterm*foreground: #ffffff
 xterm*color0: #53545b
 xterm*color1: #c00c50
 xterm*color2: #0a7040
