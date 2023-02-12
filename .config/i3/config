@@ -224,9 +224,11 @@ exec --no-startup-id pkr.py &
 bindsym $mod+o exec --no-startup-id /home/shail/.local/bin/lock.sh &
 bindsym $mod+p exec --no-startup-id /home/shail/.local/bin/power-menu.sh &
 bindsym $mod+bracketleft exec firefox &
-bindsym $mod+bracketright exec google-chrome-stable &
+bindsym $mod+bracketright exec --no-startup-id google-chrome-stable &
 bindsym $mod+c exec nemo &
 bindsym $mod+Shift+Return exec gvim ~/.config/i3/
+bindsym Print exec --no-startup-id mate-screenshot -i &
+bindsym $mod+Print exec --no-startup-id mate-screenshot &
 # -------------------------------------------
 
 # -- Scratchpads
