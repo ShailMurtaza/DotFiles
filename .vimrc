@@ -14,3 +14,5 @@ set hlsearch
 
 set relativenumber
 set number
+
+set mouse=a

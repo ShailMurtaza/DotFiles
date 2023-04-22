@@ -19,6 +19,8 @@ bindkey -v
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
 bindkey  "^[[3~"  delete-char
+#bindkey "${key[Home]}" beginning-of-line
+#bindkey "${key[Backspace]}" backward-delete-char
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall

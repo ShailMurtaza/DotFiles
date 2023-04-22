@@ -11,5 +11,5 @@ i3lock -k -L \
 --indicator \
 --verif-color=BABDB6 \
 --time-str="%I:%M:%S %p" \
---date-str="%a, %m %b %Y" \
+--date-str="%a, %d %b(%m) %Y" \
 --radius=120
