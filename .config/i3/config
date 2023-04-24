@@ -211,7 +211,7 @@ bindsym $mod+Shift+z	gaps outer current minus 5
 
 for_window [instance="origin.exe"] floating enable
 for_window [title="^.*.float.*$"] floating enable
-
+mouse_warping output
 # -- startup application
 exec --no-startup-id lxpolkit &
 exec --no-startup-id nitrogen --restore &
@@ -236,7 +236,10 @@ bindsym $mod+Shift+Return exec gvim ~/.config/i3/
 bindsym Print exec --no-startup-id mate-screenshot -i &
 bindsym $mod+Print exec --no-startup-id mate-screenshot &
 bindsym $mod+Shift+p exec --no-startup-id yad --form --scroll --field="$(pkr.py)":LBL --title "PKR.float" --center --width=600 --height=600 --borders=20 --no-buttons &
-# -------------------------------------------
+bindsym $mod+u exec kitty /home/shail/softwares/Upload-Download-Files-FlaskApp/web.py &
+bindsym $mod+Control+l workspace next
+bindsym $mod+Control+h workspace prev
+#  -------------------------------------------
 
 # -- Scratchpads
 for_window [title="dropdown"] floating enable

@@ -43,7 +43,9 @@ alias vi="vim"
 alias ls="lsd"
 alias screenshot="mate-screenshot -i"
 PROMPT='%(?.%F{blue}√.%F{red}?%?)%f %B%F{240}%1~%f%b $ '
-
+fpath+=($HOME/.zsh/pure)
+autoload -U promptinit; promptinit
+prompt pure
 
 alias dotgit="/usr/bin/git --git-dir=\"/home/shail/dotfiles/\" --work-tree=\"/home/shail/\" "
 

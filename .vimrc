@@ -1,3 +1,7 @@
+if &term == 'xterm-kitty'
+    let &t_ut=''
+endif
+
 syntax enable
 
 colorscheme molokai
