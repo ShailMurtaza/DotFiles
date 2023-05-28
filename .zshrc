@@ -48,5 +48,9 @@ autoload -U promptinit; promptinit
 prompt pure
 
 alias dotgit="/usr/bin/git --git-dir=\"/home/shail/dotfiles/\" --work-tree=\"/home/shail/\" "
+alias gl="git log --oneline"
+alias gs="git status"
+alias gc="git commit"
+alias gp="git push"
 
 export PATH="$HOME/.local/bin:$PATH"

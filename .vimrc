@@ -20,3 +20,7 @@ set relativenumber
 set number
 
 set mouse=a
+
+set expandtab
+set tabstop=4
+set shiftwidth=4

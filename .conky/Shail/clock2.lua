@@ -1,13 +1,12 @@
 conky.config = {
-	-- xinerama_head = 2,
+	--xinerama_head = 1,
 
 	double_buffer = true,
 	no_buffers = true,
 	text_buffer_size = 2048,
 	alignment = 'top_middle',
-	-- gap_x = -1366,
-	-- gap_x = 341,
-	gap_y = 50,
+	gap_x = -1320,
+	gap_y = 125,
 	--minimum_width = 550, minimum_height = 550,
 	--maximum_width = 550,
 	own_window = true,
@@ -41,20 +40,11 @@ conky.config = {
 	own_window_type = "override",
 };
 
-font_time = "valkocapela"
--- font_time = "ethnocentric"
-font_day = "Anurati"
-color_time = "A6A6A6"
+conky.text = [[
+${font Anurati:size=75}${alignc}${color D6D5D4}${time %A}#${color yellow}
 
-conky.text = string.format([[
-${font %s:size=75}${color D6D5D4}${alignc}${time %%A}#${color yellow}
+${color #ffffff}${voffset -80}${alignc}${font Chilanka Regular:size=15} ${time %d %B %Y}
 
-${color #%s}${voffset -80}${alignc}${font %s:size=15} ${time %%d %%B %%Y}
+${color #ffffff}${voffset -20}${alignc}${font Chilanka Regular:pixelsize=20}${time - %I:%M %p -}
 
-${color #%s}${voffset -20}${alignc}${font %s:pixelsize=20}${time - %%I:%%M %%p -}
-
-
-]], font_day, color_time, font_time, color_time, font_time, "ethnocentric");
-
-
--- ${font %s:size=65}${color D6D5D4}${voffset 050}${alignc}THE SHAIL SHOW#${color yellow}
+]];

@@ -95,7 +95,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -191,6 +191,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 		position top
+		tray_output primary
 		font pango:Monokai Nerd Font Bold 8
 		# status_command SCRIPT_DIR=~/.config/i3blocks i3blocks
 		status_command i3status --config ~/.config/i3/i3status.conf
@@ -224,6 +225,8 @@ exec --no-startup-id mate-volume-control-status-icon &
 exec --no-startup-id mate-power-manager &
 exec --no-startup-id blueman-applet &
 exec --no-startup-id pkr.py &
+exec --no-startup-id conky -c ~/.conky/Shail/clock.lua
+
 # -------------------------------------------
 
 # -- Custom Keybindings
@@ -231,14 +234,19 @@ bindsym $mod+o exec --no-startup-id /home/shail/.local/bin/lock.sh &
 bindsym $mod+p exec --no-startup-id /home/shail/.local/bin/power-menu.sh &
 bindsym $mod+bracketleft exec firefox &
 bindsym $mod+bracketright exec --no-startup-id google-chrome-stable &
-bindsym $mod+c exec nemo
+bindsym $mod+f exec nemo
 bindsym $mod+Shift+Return exec gvim ~/.config/i3/
 bindsym Print exec --no-startup-id mate-screenshot -i &
 bindsym $mod+Print exec --no-startup-id mate-screenshot &
 bindsym $mod+Shift+p exec --no-startup-id yad --form --scroll --field="$(pkr.py)":LBL --title "PKR.float" --center --width=600 --height=600 --borders=20 --no-buttons &
 bindsym $mod+u exec kitty /home/shail/softwares/Upload-Download-Files-FlaskApp/web.py &
+bindsym $mod+m exec --no-startup-id mate-system-monitor &
 bindsym $mod+Control+l workspace next
 bindsym $mod+Control+h workspace prev
+#  -------------------------------------------
+bindsym $mod+n exec kitty $HOME/programming/freelancing/E-commerce-Fasion-WebApp
+bindsym $mod+Shift+n exec kitty $HOME/programming/freelancing/E-commerce-Fasion-WebApp/run.sh
+bindsym $mod+c exec code
 #  -------------------------------------------
 
 # -- Scratchpads

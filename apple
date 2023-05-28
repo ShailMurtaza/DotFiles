@@ -1,2 +1,2 @@
 kojic acid
-xrandr --output HDMI2 --auto --right-of eDP1
+xrandr --output HDMI2 --auto --primary --left-of eDP1

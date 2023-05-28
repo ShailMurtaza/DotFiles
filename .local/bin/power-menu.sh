@@ -6,7 +6,7 @@ poweroff=" Poweroff / Shutdown"
 reboot=" Reboot / Restart"
 suspend=" Suspend / Sleep"
 
-menu="[CANCEL]\n$poweroff\n$lock\n$logout\n$reboot\n$suspend\n"
+menu="[CANCEL]\n$poweroff\n$lock\n$logout\n$reboot\n$suspend"
 
 choice="$(echo -e $menu | dmenu \
     -nb "${COLOR_BACKGROUND:-#151515}" \
