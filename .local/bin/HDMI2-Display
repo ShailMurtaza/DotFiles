@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+xrandr --output HDMI2 --auto --primary --left-of eDP1
+sleep 3
+feh --bg-scale '/usr/share/backgrounds/archlinux/split.png' --bg-scale '/usr/share/backgrounds/archlinux/small.png'
+
+$HOME/.conky/conky-startup.sh

@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+xrandr --output HDMI2 --off
+xrandr --output eDP1 --primary --auto
+sleep 2
+nitrogen --restore
+killall conky
+$HOME/.conky/conky-startup.sh
+exit 0
