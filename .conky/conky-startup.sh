@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+sleep 20s
 killall conky
-conky -c $HOME/.conky/clock/clock.lua
-exit 0
+cd "/home/shail/.conky/TeejeeTech"
+conky -c "/home/shail/.conky/TeejeeTech/Network Panel" &

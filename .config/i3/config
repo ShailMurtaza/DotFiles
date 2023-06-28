@@ -243,6 +243,7 @@ bindsym $mod+u exec kitty /home/shail/softwares/Upload-Download-Files-FlaskApp/w
 bindsym $mod+m exec --no-startup-id mate-system-monitor &
 bindsym $mod+Control+l workspace next
 bindsym $mod+Control+h workspace prev
+bindsym $mod+Ctrl+semicolon move workspace to output next
 #  -------------------------------------------
 bindsym $mod+n exec kitty $HOME/programming/freelancing/E-commerce-Fasion-WebApp
 bindsym $mod+Shift+n exec kitty $HOME/programming/freelancing/E-commerce-Fasion-WebApp/run.sh
