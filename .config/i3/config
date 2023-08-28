@@ -247,16 +247,22 @@ bindsym $mod+Ctrl+semicolon move workspace to output next
 #  -------------------------------------------
 bindsym $mod+n exec kitty $HOME/programming/freelancing/E-commerce-Fasion-WebApp
 bindsym $mod+Shift+n exec kitty $HOME/programming/freelancing/E-commerce-Fasion-WebApp/run.sh
-bindsym $mod+c exec code
+bindsym $mod+c exec code $HOME/programming/freelancing/E-commerce-Fasion-WebApp/
+#  -------------------------------------------
+#  -------------------------------------------
+bindsym $mod+b exec kitty $HOME/programming/PYTHON/OnlineForms/
+bindsym $mod+Shift+b exec kitty $HOME/programming/PYTHON/OnlineForms/run.sh
+bindsym $mod+comma exec code $HOME/programming/PYTHON/OnlineForms/
+
 #  -------------------------------------------
 
 # -- Scratchpads
-for_window [title="dropdown"] floating enable
-for_window [title="dropdown"] resize set 800 300
-for_window [title="dropdown"] move scratchpad
-for_window [title="dropdown"] border pixel 5
-exec_always --no-startup-id xterm -n "dropdown" &
-bindsym $mod+t [title="dropdown"] scratchpad show; [title="dropdown"] move position center
+# for_window [title="dropdown"] floating enable
+# for_window [title="dropdown"] resize set 800 300
+# for_window [title="dropdown"] move scratchpad
+# for_window [title="dropdown"] border pixel 5
+# exec_always --no-startup-id xterm -n "dropdown" &
+# bindsym $mod+t [title="dropdown"] scratchpad show; [title="dropdown"] move position center
 
 
 for_window [title="math_term"] floating enable

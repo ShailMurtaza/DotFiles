@@ -52,5 +52,6 @@ alias gl="git log --oneline"
 alias gs="git status"
 alias gc="git commit"
 alias gp="git push"
+alias grep="grep -i"
 
 export PATH="$HOME/.local/bin:$PATH"

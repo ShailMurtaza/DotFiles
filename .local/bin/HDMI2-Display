@@ -2,6 +2,7 @@
 
 xrandr --output HDMI2 --auto --primary --left-of eDP1
 sleep 3
-feh --bg-scale '/usr/share/backgrounds/archlinux/split.png' --bg-scale '/usr/share/backgrounds/archlinux/small.png'
+# feh --bg-scale '/usr/share/backgrounds/archlinux/split.png' --bg-scale '/usr/share/backgrounds/archlinux/small.png'
+feh --bg-scale '/usr/share/backgrounds/archlinux/split.png' --bg-scale '/home/shail/Pictures/backgrounds/men-besides-car.jpeg'
 
 $HOME/.conky/conky-clock.sh
