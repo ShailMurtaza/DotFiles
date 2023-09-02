@@ -257,19 +257,21 @@ bindsym $mod+comma exec code $HOME/programming/PYTHON/OnlineForms/
 #  -------------------------------------------
 
 # -- Scratchpads
-# for_window [title="dropdown"] floating enable
-# for_window [title="dropdown"] resize set 800 300
-# for_window [title="dropdown"] move scratchpad
-# for_window [title="dropdown"] border pixel 5
-# exec_always --no-startup-id xterm -n "dropdown" &
-# bindsym $mod+t [title="dropdown"] scratchpad show; [title="dropdown"] move position center
+for_window [title="^dropdown_term$"] floating enable
+for_window [title="^dropdown_term$"] resize set 800 300
+for_window [title="^dropdown_term$"] move scratchpad
+for_window [title="^dropdown_term$"] border pixel 5
+exec --no-startup-id kitty --title=dropdown_term &
+bindsym $mod+t [title="^dropdown_term$"] scratchpad show; [title="^dropdown_term$"] move position center
 
 
-for_window [title="math_term"] floating enable
-for_window [title="math_term"] resize set 800 300
-for_window [title="math_term"] move scratchpad
-for_window [title="math_term"] border pixel 5
-exec_always --no-startup-id xterm -n "math_term" "calc" &
-bindsym $mod+a [title="math_term"] scratchpad show; [title="math_term"] move position center
+for_window [title="^math_term$"] floating enable
+for_window [title="^math_term$"] resize set 800 300
+for_window [title="^math_term$"] move scratchpad
+for_window [title="^math_term$"] border pixel 5
+exec --no-startup-id xterm -n "math_term" "calc" &
+bindsym $mod+a [title="^math_term$"] scratchpad show; [title="^math_term$"] move position center
 # -------------------------------------------
 
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
