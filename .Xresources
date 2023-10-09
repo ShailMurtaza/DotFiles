@@ -1,7 +1,10 @@
 ! Theme: Tempus Past
 ! Description: Light theme inspired by old vaporwave concept art (WCAG AA compliant)
 ! Author: Protesilaos Stavrou (https://protesilaos.com)
-*.font: xft:Monospace:size=14
+! *.font: xft:monospace:size=14
+xterm*faceName: "Fira Code"
+xterm*faceSize: 14
+xterm*font:*-fixed-*-*-*-18-*
 xterm*background: #000000
 ! xterm*foreground: #53545b
 xterm*foreground: #ffffff
