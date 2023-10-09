@@ -2,13 +2,14 @@
 
 lock=" Lock"
 logout=" Logout"
-poweroff=" Poweroff / Shutdown"
+poweroff="⏻ Poweroff / Shutdown"
 reboot=" Reboot / Restart"
 suspend=" Suspend / Sleep"
 
 menu="[CANCEL]\n$poweroff\n$lock\n$logout\n$reboot\n$suspend"
 
 choice="$(echo -e $menu | dmenu \
+    -fn "monospace-10" \
     -nb "${COLOR_BACKGROUND:-#151515}" \
     -nf "${COLOR_DEFAULT:-#aaaaaa}" \
     -sf "${COLOR_HIGHLIGHT:-#589cc5}" \

@@ -39,7 +39,8 @@ compinit
 _comp_options+=(globdots)		# Include hidden files.
 
 # End of lines added by compinstall
-alias vi="vim"
+alias vim="nvim"
+alias vi="nvim"
 alias ls="lsd"
 alias screenshot="mate-screenshot -i"
 PROMPT='%(?.%F{blue}√.%F{red}?%?)%f %B%F{240}%1~%f%b $ '
@@ -53,5 +54,7 @@ alias gs="git status"
 alias gc="git commit"
 alias gp="git push"
 alias grep="grep -i"
+alias update="sudo pacman -Syu --noconfirm"
+alias ssh_gr="sshpass -p \"Boq3C192lLvt\" ssh grabjawe@66.29.137.102 -p 21098"
 
 export PATH="$HOME/.local/bin:$PATH"

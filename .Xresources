@@ -1,7 +1,7 @@
 ! Theme: Tempus Past
 ! Description: Light theme inspired by old vaporwave concept art (WCAG AA compliant)
 ! Author: Protesilaos Stavrou (https://protesilaos.com)
-*.font: xft:monospace:size=14
+*.font: xft:Monospace:size=14
 xterm*background: #000000
 ! xterm*foreground: #53545b
 xterm*foreground: #ffffff
