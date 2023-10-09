@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+xrandr --output eDP1 --off
+exit 0
