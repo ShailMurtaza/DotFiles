@@ -163,11 +163,14 @@ interval=5
 # Date Time
 #
 [date]
-command=date '+%d, %b %Y'
+command=
+command=if [ $button ]; then osmo; else date '+%d, %b %Y'; fi
 interval=10
+
 [time]
-command=date '+%a %I:%M %p'
+command=if [ $button ]; then gnome-clocks; else date '+%a %I:%M %p'; fi
 interval=5
+
 # Generic media player support
 #
 # This displays "ARTIST - SONG" if a music is playing.

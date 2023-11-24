@@ -17,5 +17,6 @@ choice=$(printf "%s\n" "${!configs[@]}" | dmenu \
     "Configuration:" -l 10
 )
 
-[ $? = 0 ] && neovide ${configs[$choice]}
+[ $? = 0 ] && neovide ${configs[$choice]} & disown
+exit;
 

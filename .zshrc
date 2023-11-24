@@ -1,4 +1,5 @@
 # Lines configured by zsh-newuser-install
+#
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=5000
@@ -54,7 +55,9 @@ alias gs="git status"
 alias gc="git commit"
 alias gp="git push"
 alias grep="grep -i"
+alias edit="sudo -E nvim "
 alias update="sudo pacman -Syu --noconfirm"
+alias http="sudo systemctl start mariadb httpd && systemctl status mariadb httpd"
 alias ssh_gr="sshpass -p \"Boq3C192lLvt\" ssh grabjawe@66.29.137.102 -p 21098"
 
 export PATH="$HOME/.local/bin:$PATH"

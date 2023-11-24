@@ -4,9 +4,11 @@ lock=" Lock"
 logout=" Logout"
 poweroff="⏻ Poweroff / Shutdown"
 reboot=" Reboot / Restart"
-suspend=" Suspend / Sleep"
+suspend="  Suspend / Sleep"
+switch="♞ Switch User"
 
-menu="[CANCEL]\n$poweroff\n$lock\n$logout\n$reboot\n$suspend"
+
+menu="[CANCEL]\n$poweroff\n$lock\n$logout\n$switch\n$reboot\n$suspend"
 
 choice="$(echo -e $menu | dmenu \
     -fn "monospace-10" \
@@ -29,5 +31,6 @@ case $choice in
 		systemctl suspend
 		;;
         $lock) exec lock.sh;;
+        $switch) exec dm-tool switch-to-greeter;;
        
 esac

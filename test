@@ -1,7 +1,0 @@
-<script src="https://www.paypal.com/sdk/js?client-id=AQOcni4FXJL8LUFOPcN-zYan9XFMue12xAdqqVUNbaw_0yEFVUo7XPEQMWdpa7DmwNWA15T-5Ogc8as8&enable-funding=venmo&currency=GBP" data-sdk-integration-source="button-factory"></script>
-
-ClassID,CourseCode,DayofWeek,Venue,Department
-A001,"CS403,""",Monday,A Block,CS
-B002,MGT101,Tuesday,B Block,MGT
-C003,ENG201,Monday,C Block,ENG
-B005,CS403,Friday,B Block,CS

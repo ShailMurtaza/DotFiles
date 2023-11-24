@@ -1,4 +1,17 @@
 kojic acid
 xrandr --output HDMI2 --auto --primary --left-of eDP1
+systemctl start vncserver@:1
 192.168.0.1 MAC Address: 68:FF:7B:19:97:72 (TP-Link Technologies)
 macchanger --mac=68:FF:7B:19:97:72 enp0s31f6
+
+1,31,398.22 PKR
+
+sudo ntfsfix /dev/sdXY
+sudo mount -t ntfs-3g -o remove_hiberfile /dev/sdXY /media/Windows
+
+iwconfig wlan0
+ethtool eth0
+
+411287
+447044
+Inter: 153445, 108640
