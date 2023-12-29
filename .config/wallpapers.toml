@@ -1,0 +1,18 @@
+# Config file for wallpapers for different screens using feh
+# https://man.archlinux.org/man/feh.1.en#BACKGROUND_SETTING
+
+# display, wallpaper and bg fields are mandatory
+
+[[wallpaper]]
+display = "HDMI2"
+wallpaper = "/usr/share/backgrounds/archlinux/split.png"
+bg = "fill"
+
+
+[[wallpaper]]
+display = "eDP1"
+wallpaper = "/home/shail/Pictures/backgrounds/HD-wallpaper-dark-demon-horns-minimalist-red-hood-glasses-boy.jpg"
+bg = "center"
+bg-color = "black"
+# options = ["--geometry", "+10+100"] # Other options
+
