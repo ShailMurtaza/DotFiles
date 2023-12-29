@@ -49,6 +49,7 @@ fpath+=($HOME/.zsh/pure)
 autoload -U promptinit; promptinit
 prompt pure
 
+alias ssh="kitty +kitten ssh"
 alias dotgit="/usr/bin/git --git-dir=\"/home/shail/dotfiles/\" --work-tree=\"/home/shail/\" "
 alias gl="git log --oneline"
 alias gs="git status"
@@ -58,6 +59,7 @@ alias grep="grep -i"
 alias edit="sudo -E nvim "
 alias update="sudo pacman -Syu --noconfirm"
 alias http="sudo systemctl start mariadb httpd && systemctl status mariadb httpd"
-alias ssh_gr="sshpass -p \"Boq3C192lLvt\" ssh grabjawe@66.29.137.102 -p 21098"
+alias pip="pip3 install --break-system-packages"
 
 export PATH="$HOME/.local/bin:$PATH"
+

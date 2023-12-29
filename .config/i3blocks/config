@@ -116,7 +116,7 @@ interval=3
 
 [netuptest]
 label=NET: 
-command=if ping -w 1 -c 1 8.8.8.8 >/dev/null 2>&1; then printf "🡹\n\n#00FF00\n" ; else printf "🡻\n\n#FF0000\n"; fi
+command=if ping -w 1 -c 1 8.8.4.4 >/dev/null 2>&1; then printf "🡹\n\n#00FF00\n" ; else printf "🡻\n\n#FF0000\n"; fi
 markup=pango
 interval=3
 
@@ -163,12 +163,11 @@ interval=5
 # Date Time
 #
 [date]
-command=
 command=if [ $button ]; then osmo; else date '+%d, %b %Y'; fi
 interval=10
 
 [time]
-command=if [ $button ]; then gnome-clocks; else date '+%a %I:%M %p'; fi
+command=if [ $button ]; then gnome-clocks & disown; else date '+%a %I:%M %p'; fi
 interval=5
 
 # Generic media player support

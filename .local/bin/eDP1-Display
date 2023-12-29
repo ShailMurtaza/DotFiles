@@ -7,3 +7,4 @@ nitrogen --restore
 killall conky
 $HOME/.conky/conky-clock.sh
 exit 0
+

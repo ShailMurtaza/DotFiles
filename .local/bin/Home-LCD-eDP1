@@ -2,7 +2,8 @@
 
 xrandr --output eDP1 --mode 1366x768 --pos 1280x0 --rotate normal --output DP1 --off --output DP2 --off --output HDMI1 --off --output HDMI2 --primary --mode 1280x1024 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 sleep 3
-# feh --bg-scale '/usr/share/backgrounds/archlinux/split.png' --bg-scale '/usr/share/backgrounds/archlinux/small.png'
-feh --bg-scale '/usr/share/backgrounds/archlinux/split.png' --bg-scale '/home/shail/Pictures/backgrounds/men-besides-car.jpeg'
+
+feh --bg-scale '/usr/share/backgrounds/archlinux/split.png' --output HDMI2
+feh --bg-scale '/home/shail/Pictures/backgrounds/men-besides-car.jpeg' --output eDP1
 
 $HOME/.conky/conky-clock.sh

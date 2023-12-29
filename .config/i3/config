@@ -65,10 +65,10 @@ bindsym $mod+d exec --no-startup-id dmenu_run -i -p "MENU"
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -89,7 +89,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+g split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -254,6 +254,8 @@ bindsym $mod+Ctrl+semicolon move workspace to output next
 # bindsym $mod+Shift+n exec kitty $HOME/programming/freelancing/E-commerce-Fasion-WebApp/run.sh
 #  -------------------------------------------
 
+for_window [title="^vCoolor$"] floating enable
+
 # -- Scratchpads
 for_window [title="^dropdown_term$"] floating enable
 for_window [title="^dropdown_term$"] resize set 800 300
@@ -267,7 +269,8 @@ for_window [title="^math_term$"] floating enable
 for_window [title="^math_term$"] resize set 800 300
 for_window [title="^math_term$"] move scratchpad
 for_window [title="^math_term$"] border pixel 5
-exec --no-startup-id xterm -n "math_term" "calc" &
+# exec --no-startup-id xterm -n "math_term" "calc" &
+exec --no-startup-id kitty -o font_size=12 --title="math_term" "calc" &
 bindsym $mod+a [title="^math_term$"] scratchpad show; [title="^math_term$"] move position center
 # -------------------------------------------
 
