@@ -38,9 +38,12 @@ def get_cmd(args):
         cmd.append(bg_color)
 
     # set other options if given
-    opt = args.get("options")
+    opt = args.get("option")
     if opt:
-        cmd += opt
+        for o in opt:
+            cmd.append(o["arg"])
+            cmd.append(o["value"])
+    print(cmd)
     return cmd
 
 
@@ -64,4 +67,35 @@ def change_wallpaper():
 
 if __name__ == "__main__":
     change_wallpaper()
+
+# Config File example
+"""
+# Config file for wallpapers for different screens using feh
+# https://man.archlinux.org/man/feh.1.en#BACKGROUND_SETTING
+
+# display, wallpaper and bg fields are mandatory
+
+[[wallpaper]]
+    display = "HDMI2"
+    wallpaper = "image1.png"
+    bg = "fill"
+    bg-color = "black"
+
+
+[[wallpaper]]
+    display = "eDP1"
+    wallpaper = "image2.png"
+    bg = "center"
+    bg-color = "black"
+
+    # add other options if needed
+    [[wallpaper.option]]
+        arg = "--geometry"
+        value = "+10+100"
+
+    [[wallpaper.option]]
+        arg = "--alpha"
+        value = "0.44"
+
+"""
 
