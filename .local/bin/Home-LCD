@@ -3,8 +3,7 @@
 xrandr --output HDMI2 --primary --mode 1280x1024 --pos 0x0 --rotate normal --output eDP1 --off
 
 sleep 3
-# feh --bg-scale '/usr/share/backgrounds/archlinux/split.png' --bg-scale '/usr/share/backgrounds/archlinux/small.png'
-feh --bg-scale '/usr/share/backgrounds/archlinux/split.png'
+wallpapers.py
 
 $HOME/.conky/conky-clock.sh
 

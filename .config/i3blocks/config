@@ -101,6 +101,12 @@ label=IP:
 color=#26DCD8
 interval=3
 
+[iface]
+IFACE=ppp0
+label=IP: 
+color=#26DCD8
+interval=3
+
 #
 #[bandwidth]
 #label=ETH: 
