@@ -1,0 +1,10 @@
+set number
+set mouse=a
+set tuioptions=p
+colorscheme papercolor-dark-custom
+
+map <C-t> :tabnew<cr>
+map <C-l> :tabnext<cr>
+map <C-h> :tabprevious<cr>
+map <C-c> :tabclose<cr>
+
