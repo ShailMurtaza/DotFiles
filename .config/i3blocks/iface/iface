@@ -22,13 +22,13 @@ IF="${IFACE:-$BLOCK_INSTANCE}"
 IF="${IF:-$(ip route | awk '/^default/ { print $5 ; exit }')}"
 
 # Exit if there is no default route
-[[ -z "$IF" ]] && exit
+[[ -z "$IF" ]] && exit 1
 
 #------------------------------------------------------------------------
 
 # As per #36 -- It is transparent: e.g. if the machine has no battery or wireless
 # connection (think desktop), the corresponding block should not be displayed.
-[[ ! -d /sys/class/net/${IF} ]] && exit
+[[ ! -d /sys/class/net/${IF} ]] && exit 1
 
 #------------------------------------------------------------------------
 
@@ -54,12 +54,12 @@ if [[ "$IF" = "" ]] || [[ "$(cat /sys/class/net/$IF/operstate)" = 'down' ]]; the
   #echo "${LABEL} down" # full text
   #echo "${LABEL} down" # short text
   #echo \#FF0000 # color
-  exit
+  exit 1
 fi
 
 # if no interface is found, use the first device with a global scope
 IPADDR=$(ip addr show $IF | perl -n -e "/$AF ([^ \/]+).* scope global/ && print \$1 and exit")
-
+[[ -z "$IPADDR" ]] && exit 1
 case $BLOCK_BUTTON in
   3) echo -n "$IPADDR" | xclip -q -se c ;;
 esac
