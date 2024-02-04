@@ -122,7 +122,7 @@ interval=3
 
 [netuptest]
 label=NET: 
-command=if ping -w 1 -c 1 8.8.4.4 >/dev/null 2>&1; then printf "🡹\n\n#00FF00\n" ; else printf "🡻\n\n#FF0000\n"; fi
+command=if nslookup 8.8.8.8 >/dev/null 2>&1; then printf "🡹\n\n#00FF00\n" ; else printf "🡻\n\n#FF0000\n"; fi
 markup=pango
 interval=3
 
