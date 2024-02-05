@@ -119,7 +119,10 @@ filetype {*.zip,*.jar,*.war,*.ear,*.oxt,*.apkg},
        \ tar -tf %f | less,
        \ {Extract here}
        \ tar -vxf %c,
-fileviewer *.zip,*.jar,*.war,*.ear,*.oxt tar -tf %f
+
+" fileviewer *.jar,*.war,*.ear,*.oxt tar -tf %f
+fileviewer {*.zip,*.jar,*.war,*.ear,*.oxt} unzip -l %f | less
+
 
 " ArchiveMount
 filetype {*.tar,*.tar.bz2,*.tbz2,*.tgz,*.tar.gz,*.tar.xz,*.txz,*.tar.zst,
@@ -137,7 +140,13 @@ fileviewer {*.tar},<application/x-tar> tar -tf %c
 filetype {*.rar},<application/x-rar>
        \ {Mount with rar2fs}
        \ FUSE_MOUNT|rar2fs %SOURCE_FILE %DESTINATION_DIR,
-fileviewer {*.rar},<application/x-rar> unrar v %c
+fileviewer {*.rar},<application/x-rar> unrar l %c
+
+" Fuse7z and 7z archives
+filetype {*.7z},<application/x-7z-compressed>
+       \ {Mount with fuse-7z}
+       \ FUSE_MOUNT|fuse-7z %SOURCE_FILE %DESTINATION_DIR,
+fileviewer {*.7z},<application/x-7z-compressed> 7z l %c
 
 " IsoMount
 filetype {*.iso},<application/x-iso9660-image>
@@ -154,11 +163,6 @@ filetype *.ftp
        \ {Mount with curlftpfs}
        \ FUSE_MOUNT2|curlftpfs -o ftp_port=-,,disable_eprt %PARAM %DESTINATION_DIR %FOREGROUND,
 
-" Fuse7z and 7z archives
-filetype {*.7z},<application/x-7z-compressed>
-       \ {Mount with fuse-7z}
-       \ FUSE_MOUNT|fuse-7z %SOURCE_FILE %DESTINATION_DIR,
-fileviewer {*.7z},<application/x-7z-compressed> 7z l %c
 
 fileviewer {*.doc},<application/msword> catdoc %c
 fileviewer {*.docx},
@@ -179,7 +183,7 @@ filextype */
 
 " Syntax highlighting in preview
 "
-fileviewer *.[ch],*.[ch]pp,*.html,*.css,*.less,*.js,*.java,*.go,*.py,*.coffee,*.dart,*.lua,*.md,*.rb,*.ts,*.php,*.cs,*.vim,*.conf,*.swift,*.json,*.toml,*.xml,*.bash highlight -O xterm256 -s dante %c --force
+fileviewer *.[ch],*.[ch]pp,*.html,*.css,*.less,*.js,*.java,*.go,*.py,*.coffee,*.dart,*.lua,*.md,*.rb,*.ts,*.php,*.cs,*.vim,*.conf,*.swift,*.json,*.toml,*.xml,*.bash,*.sh highlight -O xterm256 -s dante %c --force
 " Explicitly set highlight type for some extensions
 "
 " 256-color terminal
@@ -194,17 +198,19 @@ fileviewer Makefile,Makefile.* highlight -O xterm256 -s dante --syntax make %c
 
 " Displaying pictures in terminal
 " fileviewer *.jpg,*.png shellpic %c
-" fileviewer * <application/*> hexdump %c
-" fileviewer *[^/] hexdump %c
 
+fileviewer <application/*> echo "Binary: "
+filetype *.desktop exo-desktop-item-edit
 " Open all other files with default system programs (you can also remove all
 " :file[x]type commands above to ensure they don't interfere with system-wide
 " settings).  By default all unknown files are opened with 'vi[x]cmd'
 " uncommenting one of lines below will result in ignoring 'vi[x]cmd' option
 " for unknown file types.
 " For *nix:
-" filetype *[^/] <text/*> nvim %c
-filetype * xdg-open & disown
+
+filetype !<text/*> xdg-open &
+" filetype !<text/*> exo-open &
+
 " For OS X:
 " filetype * open
 " For Windows:
