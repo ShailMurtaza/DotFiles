@@ -90,20 +90,20 @@ separator=true
 
 [iface]
 IFACE=wlan0
-label=IP: 
+label=
 color=#26DCD8
 interval=3
 # separator=false
 
 [iface]
 IFACE=enp0s31f6
-label=IP: 
+label=
 color=#26DCD8
 interval=3
 
 [iface]
 IFACE=ppp0
-label=IP: 
+label=
 color=#26DCD8
 interval=3
 
@@ -122,7 +122,7 @@ interval=3
 
 [netuptest]
 label=NET: 
-command=if nslookup 8.8.8.8 >/dev/null 2>&1; then printf "🡹\n\n#00FF00\n" ; else printf "🡻\n\n#FF0000\n"; fi
+command=if nc -z 8.8.8.8 53 >/dev/null 2>&1; then printf "🡹\n\n#00FF00\n" ; else printf "🡻\n\n#FF0000\n"; fi
 markup=pango
 interval=3
 
@@ -146,7 +146,7 @@ interval=4
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-label=MEM 
+label=MEM: 
 separator=true
 interval=5
 
@@ -169,7 +169,7 @@ interval=5
 # Date Time
 #
 [date]
-command=if [ $button ]; then osmo; else date '+%d, %b %Y'; fi
+command=if [ $button ]; then osmo & disown; else date '+%d, %b %Y'; fi
 interval=10
 
 [time]
@@ -201,5 +201,4 @@ interval=5
 #[temperature]
 #label=TEMP
 #interval=10
-
 

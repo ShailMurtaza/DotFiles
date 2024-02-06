@@ -49,17 +49,17 @@ fpath+=($HOME/.zsh/pure)
 autoload -U promptinit; promptinit
 prompt pure
 
+alias grep="grep --color -i"
 alias ssh="kitty +kitten ssh"
 alias dotgit="/usr/bin/git --git-dir=\"/home/shail/dotfiles/\" --work-tree=\"/home/shail/\" "
 alias gl="git log --oneline"
 alias gs="git status"
 alias gc="git commit"
 alias gp="git push"
-alias grep="grep -i"
 alias edit="sudo -E nvim "
 alias update="sudo pacman -Syu --noconfirm"
 alias http="sudo systemctl start mariadb httpd && systemctl status mariadb httpd"
-alias pip="pip3 install --break-system-packages"
-
+#alias pip="pip3 install --break-system-packages"
+alias pp="source $HOME/programming/PYTHON/env/bin/activate"
 export PATH="$HOME/.local/bin:$PATH"
 
