@@ -1,7 +1,7 @@
 [[wallpaper]]
     display = "HDMI2"
     wallpaper = "/usr/share/backgrounds/archlinux/split.png"
-    bg = "fill"
+    bg = "scale"
     bg-color = "black"
 
 

@@ -61,5 +61,4 @@ alias update="sudo pacman -Syu --noconfirm"
 alias http="sudo systemctl start mariadb httpd && systemctl status mariadb httpd"
 #alias pip="pip3 install --break-system-packages"
 alias pp="source $HOME/programming/PYTHON/env/bin/activate"
-export PATH="$HOME/.local/bin:$PATH"
 

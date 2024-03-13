@@ -1,6 +1,8 @@
 set number
 set mouse=a
 set tuioptions=p
+" Hide ..
+set dotdirs=
 " set previewoptions+=graphicsdelay:0
 colorscheme papercolor-dark-custom
 
@@ -8,17 +10,18 @@ map <C-t> :tabnew<cr>
 map <C-l> :tabnext<cr>
 map <C-h> :tabprevious<cr>
 map <C-c> :tabclose<cr>
-map <C-c> :tabclose<cr>
 map . za
-
+map i :!nsxiv .&disown<cr>
+map x :!./%f & disown<cr>
 
 " set statusline=" %-15t %T %=  %A  %7u:%-7g  %-5s %d %c"
 " set statusline="Shail is shail  %{system('echo yo!')}"
 set statusline=" Hint: %z%= %A %10u:%-7g %15s %20d"
-
 set millerview
 set milleroptions=lsize:1,csize:2,rsize:3,rpreview:all
 only
 
 " Not supported yet
 " set fillchars+=millersep:'|'
+
+command! unpack aunpack %c

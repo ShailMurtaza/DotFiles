@@ -217,6 +217,7 @@ bindsym $mod+Shift+z	gaps outer current minus 5
 for_window [instance="origin.exe"] floating enable
 for_window [title="^.*.float.*$"] floating enable
 mouse_warping output
+
 # -- startup application
 exec --no-startup-id lxpolkit &
 exec --no-startup-id wallpapers.py &
@@ -228,9 +229,11 @@ exec --no-startup-id mate-volume-control-status-icon &
 # exec --no-startup-id cbatticon BAT1 &
 exec --no-startup-id mate-power-manager &
 exec --no-startup-id blueman-applet &
-# exec --no-startup-id pkr.py &
+exec --no-startup-id pkr.py &
 exec --no-startup-id conky -c ~/.conky/clock/clock.lua &
-
+exec --no-startup-id numlockx on &
+# Refresh numlock in i3blocks
+exec --no-startup-id pkill -SIGRTMIN+11 i3blocks &
 # -------------------------------------------
 
 # -- Custom Keybindings
@@ -240,16 +243,19 @@ bindsym $mod+bracketleft exec firefox &
 bindsym $mod+bracketright exec --no-startup-id google-chrome-stable &
 bindsym $mod+f exec kitty vifm &
 bindsym $mod+b exec homebank &
-bindsym $mod+Shift+Return exec /home/shail/.local/bin/config_edit.sh &
+bindsym $mod+Shift+Return exec --no-startup-id /home/shail/.local/bin/config_edit.sh &
 bindsym Print exec --no-startup-id mate-screenshot -i &
 bindsym $mod+Print exec --no-startup-id mate-screenshot &
 bindsym $mod+c exec --no-startup-id code &
-bindsym $mod+Shift+p exec --no-startup-id yad --form --scroll --field="$(pkr.py)":LBL --title "PKR.float" --center --width=600 --height=600 --borders=20 --no-buttons &
+bindsym $mod+Shift+p exec --no-startup-id yad --form --scroll --field="$(pkr.py | head -n 30)":LBL --title "PKR.float" --center --width=600 --height=600 --borders=20 --no-buttons &
 bindsym $mod+u exec kitty /home/shail/softwares/Upload-Download-Files-FlaskApp/web.py &
 bindsym $mod+m exec --no-startup-id mate-system-monitor &
 bindsym $mod+Control+l workspace next
 bindsym $mod+Control+h workspace prev
 bindsym $mod+Ctrl+semicolon move workspace to output next
+# Net refresh i3blocks
+bindsym $mod+n exec --no-startup-id pkill -SIGRTMIN+12 i3blocks
+
 #  -------------------------------------------
 # bindsym $mod+n exec kitty $HOME/programming/freelancing/E-commerce-Fasion-WebApp
 # bindsym $mod+Shift+n exec kitty $HOME/programming/freelancing/E-commerce-Fasion-WebApp/run.sh
@@ -270,7 +276,6 @@ for_window [title="^math_term$"] floating enable
 for_window [title="^math_term$"] resize set 800 300
 for_window [title="^math_term$"] move scratchpad
 for_window [title="^math_term$"] border pixel 5
-# exec --no-startup-id xterm -n "math_term" "calc" &
 exec --no-startup-id kitty -o font_size=12 --title="math_term" "calc" &
 bindsym $mod+a [title="^math_term$"] scratchpad show; [title="^math_term$"] move position center
 # -------------------------------------------

@@ -122,9 +122,10 @@ interval=3
 
 [netuptest]
 label=NET: 
-command=if nc -z 8.8.8.8 53 >/dev/null 2>&1; then printf "🡹\n\n#00FF00\n" ; else printf "🡻\n\n#FF0000\n"; fi
+command=if nc -z -w 2 8.8.8.8 53 >/dev/null 2>&1; then printf "🡹\n\n#00FF00\n" ; else printf "🡻\n\n#FF0000\n"; fi
 markup=pango
 interval=3
+signal=12
 
 
 # CPU usage
@@ -173,7 +174,8 @@ command=if [ $button ]; then osmo & disown; else date '+%d, %b %Y'; fi
 interval=10
 
 [time]
-command=if [ $button ]; then gnome-clocks & disown; else date '+%a %I:%M %p'; fi
+#command=if [ $button ]; then gnome-clocks & disown; else date '+%a %I:%M %p'; fi
+command=date '+%a %I:%M %p'
 interval=5
 
 # Generic media player support

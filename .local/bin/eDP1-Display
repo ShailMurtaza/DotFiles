@@ -3,7 +3,7 @@
 xrandr --output HDMI2 --off
 xrandr --output eDP1 --primary --auto
 sleep 2
-nitrogen --restore
+wallpapers.py
 killall conky
 $HOME/.conky/conky-clock.sh
 exit 0
