@@ -25,3 +25,5 @@ only
 " set fillchars+=millersep:'|'
 
 command! unpack aunpack %c
+command! zip zip_files.sh %a.zip %f
+
