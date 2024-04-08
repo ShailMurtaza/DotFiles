@@ -170,13 +170,20 @@ interval=5
 # Date Time
 #
 [date]
-command=if [ $button ]; then osmo & disown; else date '+%d, %b %Y'; fi
+# command=if [ $button ]; then osmo & disown; else date '+%d, %b %Y'; fi
+command=date '+%d, %b %Y'
 interval=10
 
 [time]
 #command=if [ $button ]; then gnome-clocks & disown; else date '+%a %I:%M %p'; fi
 command=date '+%a %I:%M %p'
 interval=5
+
+[keymap]
+command=xkb-switch -W
+#or
+#command=bash -c 'xkb-switch;xkb-switch -W'
+interval=persist
 
 # Generic media player support
 #
@@ -200,7 +207,7 @@ interval=5
 # Support multiple chips, though lm-sensors.
 # The script may be called with -w and -c switches to specify thresholds,
 # see the script for details.
-#[temperature]
-#label=TEMP
-#interval=10
+# [temperature]
+# label=TEMP
+# interval=3
 

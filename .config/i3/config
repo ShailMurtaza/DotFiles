@@ -224,6 +224,7 @@ exec --no-startup-id wallpapers.py &
 exec --no-startup-id picom --config /home/shail/.config/i3/picom.conf &
 exec --no-startup-id parcellite &
 exec --no-startup-id mate-volume-control-status-icon &
+exec --no-startup-id setxkbmap -option 'grp:alt_shift_toggle' -layout us,pk
 # exec --no-startup-id volumeicon &
 # exec --no-startup-id cbatticon BAT0 &
 # exec --no-startup-id cbatticon BAT1 &
@@ -231,7 +232,7 @@ exec --no-startup-id mate-power-manager &
 exec --no-startup-id blueman-applet &
 exec --no-startup-id pkr.py &
 exec --no-startup-id conky -c ~/.conky/clock/clock.lua &
-exec --no-startup-id numlockx on &
+# exec --no-startup-id numlockx on &
 # Refresh numlock in i3blocks
 exec --no-startup-id pkill -SIGRTMIN+11 i3blocks &
 # -------------------------------------------
@@ -255,6 +256,7 @@ bindsym $mod+Control+h workspace prev
 bindsym $mod+Ctrl+semicolon move workspace to output next
 # Net refresh i3blocks
 bindsym $mod+n exec --no-startup-id pkill -SIGRTMIN+12 i3blocks
+bindsym $mod+q floating enable; resize set 1103 582; move position center
 
 #  -------------------------------------------
 # bindsym $mod+n exec kitty $HOME/programming/freelancing/E-commerce-Fasion-WebApp
@@ -262,6 +264,9 @@ bindsym $mod+n exec --no-startup-id pkill -SIGRTMIN+12 i3blocks
 #  -------------------------------------------
 
 for_window [title="^vCoolor$"] floating enable
+for_window [title="^term_exec_custom$"] floating enable
+for_window [title="^term_exec_custom$"] resize set 800 300
+for_window [title="^term_exec_custom$"] move position center
 
 # -- Scratchpads
 for_window [title="^dropdown_term$"] floating enable
