@@ -212,7 +212,7 @@ filetype *.desktop exo-desktop-item-edit
 " for unknown file types.
 " For *nix:
 
-filetype !<text/*> xdg-open &
+filetype !<text/*> xdg-open %c &
 " filetype !<text/*> exo-open &
 
 " For OS X:

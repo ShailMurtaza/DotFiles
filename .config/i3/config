@@ -77,10 +77,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -235,6 +235,7 @@ exec --no-startup-id conky -c ~/.conky/clock/clock.lua &
 # exec --no-startup-id numlockx on &
 # Refresh numlock in i3blocks
 exec --no-startup-id pkill -SIGRTMIN+11 i3blocks &
+exec --no-startup-id touchegg &
 # -------------------------------------------
 
 # -- Custom Keybindings
@@ -251,6 +252,7 @@ bindsym $mod+c exec --no-startup-id code &
 bindsym $mod+Shift+p exec --no-startup-id yad --form --scroll --field="$(pkr.py | head -n 30)":LBL --title "PKR.float" --center --width=600 --height=600 --borders=20 --no-buttons &
 bindsym $mod+u exec kitty /home/shail/softwares/Upload-Download-Files-FlaskApp/web.py &
 bindsym $mod+m exec --no-startup-id mate-system-monitor &
+bindsym $mod+Shift+m exec --no-startup-id multimc &
 bindsym $mod+Control+l workspace next
 bindsym $mod+Control+h workspace prev
 bindsym $mod+Ctrl+semicolon move workspace to output next
@@ -263,6 +265,7 @@ bindsym $mod+q floating enable; resize set 1103 582; move position center
 # bindsym $mod+Shift+n exec kitty $HOME/programming/freelancing/E-commerce-Fasion-WebApp/run.sh
 #  -------------------------------------------
 
+for_window [class="^SimpleScreenRecorder$"] floating enable
 for_window [title="^vCoolor$"] floating enable
 for_window [title="^term_exec_custom$"] floating enable
 for_window [title="^term_exec_custom$"] resize set 800 300

@@ -1,7 +1,6 @@
 #!/usr/bin/bash
 
-xrandr --output HDMI2 --off
-xrandr --output eDP1 --primary --auto
+xrandr --output eDP1 --primary --auto --output HDMI2 --off
 sleep 2
 wallpapers.py
 killall conky
