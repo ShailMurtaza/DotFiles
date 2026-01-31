@@ -26,7 +26,7 @@ case $choice in
         $reboot) exec systemctl reboot;;
         $logout) i3-msg exit;;# kill -HUP $XDG_SESSION_PID;;
         $suspend)
-		~/.local/bin/lock.sh
+		~/.local/bin/lock2.sh
 		sleep 0.4
 		systemctl suspend
 		;;
