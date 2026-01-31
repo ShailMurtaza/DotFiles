@@ -10,3 +10,4 @@ PS1='[\u@\h \W]\$ '
 PS1='~ '
 
 export PATH="$HOME/.local/bin:$PATH"
+export WAYLAND_DISPLAY=""

@@ -47,6 +47,25 @@ alias gp="git push"
 alias edit="sudo -E nvim "
 alias update="sudo pacman -Syu --noconfirm"
 alias http="sudo systemctl start mariadb httpd && systemctl status mariadb httpd"
-#alias pip="pip3 install --break-system-packages"
 alias pp="source $HOME/programming/PYTHON/env/bin/activate"
+alias server="python -m http.server"
+alias displays="watch -n 1 \"xrandr | awk '/ connected/ {printf \\\"%s %s  \\\", \\\$1, \\\$2}'\""
 
+
+export NODE_OPTIONS="--dns-result-order=ipv4first"
+export NPM_PACKAGES="${HOME}/.npm-packages"
+export PATH="$PATH:$NPM_PACKAGES/bin"
+export PATH="$HOME/.npm-global/bin:$PATH"
+
+export WINEPREFIX="/home/shail/.wine"
+export WAYLAND_DISPLAY=""
+
+source /home/shail/.zsh_extras
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"

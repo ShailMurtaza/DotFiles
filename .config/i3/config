@@ -164,20 +164,16 @@ focus_follows_mouse no
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Right resize shrink width 10 px or 10 ppt
+        bindsym Up resize grow height 10 px or 10 ppt
+        bindsym Down resize shrink height 10 px or 10 ppt
+        bindsym Left resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -220,7 +216,7 @@ mouse_warping output
 
 # -- startup application
 exec --no-startup-id lxpolkit &
-exec --no-startup-id wallpapers.py &
+exec --no-startup-id wallpapers.sh &
 exec --no-startup-id picom --config /home/shail/.config/i3/picom.conf &
 exec --no-startup-id parcellite &
 exec --no-startup-id mate-volume-control-status-icon &
@@ -250,9 +246,10 @@ bindsym Print exec --no-startup-id mate-screenshot -i &
 bindsym $mod+Print exec --no-startup-id mate-screenshot &
 bindsym $mod+c exec --no-startup-id code &
 bindsym $mod+Shift+p exec --no-startup-id yad --form --scroll --field="$(pkr.py | head -n 30)":LBL --title "PKR.float" --center --width=600 --height=600 --borders=20 --no-buttons &
-bindsym $mod+u exec kitty /home/shail/softwares/Upload-Download-Files-FlaskApp/web.py &
+bindsym $mod+u exec --no-startup-id kitty /home/shail/softwares/Upload-Download-Files-FlaskApp/start.sh &
 bindsym $mod+m exec --no-startup-id mate-system-monitor &
 bindsym $mod+Shift+m exec --no-startup-id multimc &
+bindsym $mod+semicolon exec --no-startup-id lutris &
 bindsym $mod+Control+l workspace next
 bindsym $mod+Control+h workspace prev
 bindsym $mod+Ctrl+semicolon move workspace to output next
@@ -266,6 +263,8 @@ bindsym $mod+q floating enable; resize set 1103 582; move position center
 #  -------------------------------------------
 
 for_window [class="^SimpleScreenRecorder$"] floating enable
+for_window [class="^nfs13.exe$"] floating enable
+for_window [class="^nfs13.exe$"] move position center
 for_window [title="^vCoolor$"] floating enable
 for_window [title="^term_exec_custom$"] floating enable
 for_window [title="^term_exec_custom$"] resize set 800 300

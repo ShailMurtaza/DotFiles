@@ -3,7 +3,7 @@
 xrandr --output HDMI2 --primary --mode 1280x1024 --pos 0x0 --rotate normal --output eDP1 --off
 
 sleep 3
-wallpapers.py
+wallpapers.sh
 
 $HOME/.conky/conky-clock.sh
 
