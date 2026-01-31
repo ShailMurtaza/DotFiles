@@ -1,13 +1,12 @@
 [[wallpaper]]
     display = "HDMI2"
-    wallpaper = "/usr/share/backgrounds/archlinux/split.png"
-    bg = "scale"
+    wallpaper = "/home/shail/Pictures/backgrounds/parrot-wallpapers/backgrounds/toxic2.jpg"
+    bg = "center"
     bg-color = "black"
-
 
 [[wallpaper]]
     display = "eDP1"
-    wallpaper = "/home/shail/Pictures/backgrounds/HD-wallpaper-dark-demon-horns-minimalist-red-hood-glasses-boy.jpg"
-    bg = "center"
+    wallpaper = "/home/shail/Pictures/backgrounds/wp5582226-neon-samurai-cyberpunk-wallpapers.jpg"
+    bg = "max"
     bg-color = "black"
 
