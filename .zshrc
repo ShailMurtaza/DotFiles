@@ -39,7 +39,7 @@ prompt pure
 
 alias grep="grep --color -i"
 alias ssh="kitty +kitten ssh"
-alias dotgit="/usr/bin/git --git-dir=\"/home/shail/dotfiles/\" --work-tree=\"/home/shail/\" "
+alias dotgit="/usr/bin/git --git-dir=\"/home/shail/.dotfiles/\" --work-tree=\"/home/shail/\" "
 alias gl="git log --oneline"
 alias gs="git status"
 alias gc="git commit"
