@@ -27,3 +27,7 @@ only
 command! unpack aunpack %c
 command! zip zip_files.sh %a.zip %f
 
+
+mark u ~/Desktop/University
+mark d ~/Downloads
+

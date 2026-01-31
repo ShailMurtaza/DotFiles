@@ -181,6 +181,7 @@ filextype *.pro qtcreator %f &
 filextype */
         \ {View in thunar}
         \ Thunar %f &,
+filetype *.sh nvim %c
 
 " Syntax highlighting in preview
 "
@@ -212,7 +213,7 @@ filetype *.desktop exo-desktop-item-edit
 " for unknown file types.
 " For *nix:
 
-filetype !<text/*> xdg-open %c &
+filetype !<text/*> xdg-open %c %i &
 " filetype !<text/*> exo-open &
 
 " For OS X:
