@@ -10,6 +10,12 @@ fi
 zip_file="$1"
 shift  # Remove the first parameter from the list
 
+# Check if name for zipfile is provided or not
+if [[ "$zip_file" == ".zip" ]]; then
+    echo "Please provide filename for ZIP"
+    exit 1
+fi
+
 # Check if zip file already exists
 if [ -f "$zip_file" ]; then
     echo "Error: Zip file '$zip_file' already exists. Please choose a different name."
