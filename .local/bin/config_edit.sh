@@ -17,6 +17,6 @@ choice=$(printf "%s\n" "${!configs[@]}" | dmenu \
     "Configuration:" -l 10
 )
 
-[ $? = 0 ] && neovide ${configs[$choice]} & disown
+[ $? = 0 ] && kitty nvim ${configs[$choice]} & disown
 exit;
 
