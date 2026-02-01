@@ -1,0 +1,2 @@
+#!/bin/sh
+cat $HOME/.config/dmenu_apps | dmenu "$@" | ${SHELL:-"/bin/sh"} &

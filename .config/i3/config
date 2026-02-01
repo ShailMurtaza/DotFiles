@@ -31,9 +31,6 @@ exec --no-startup-id dex --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -57,13 +54,8 @@ bindsym $mod+Return exec kitty -o confirm_os_window_close=-1
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -i -p "MENU" &
-# A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-
+bindsym $mod+d exec dmenu_run_custom -i -p "MENU" &
+#
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -215,20 +207,17 @@ for_window [title="^.*.float.*$"] floating enable
 mouse_warping output
 
 # -- startup application
-exec --no-startup-id lxpolkit &
+exec --no-startup-id /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 exec --no-startup-id wallpapers.sh &
 exec --no-startup-id picom --config /home/shail/.config/i3/picom.conf &
 exec --no-startup-id parcellite &
+exec --no-startup-id nm-applet
 exec --no-startup-id mate-volume-control-status-icon &
 exec --no-startup-id setxkbmap -option 'grp:alt_shift_toggle' -layout us,pk &
-# exec --no-startup-id volumeicon &
-# exec --no-startup-id cbatticon BAT0 &
-# exec --no-startup-id cbatticon BAT1 &
 exec --no-startup-id mate-power-manager &
 exec --no-startup-id blueman-applet &
 exec --no-startup-id pkr.py &
 exec --no-startup-id conky -c ~/.conky/clock/clock.lua &
-# exec --no-startup-id numlockx on &
 # Refresh numlock in i3blocks
 exec --no-startup-id pkill -SIGRTMIN+11 i3blocks &
 exec --no-startup-id touchegg &
