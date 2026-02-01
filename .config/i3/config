@@ -209,7 +209,7 @@ mouse_warping output
 # -- startup application
 exec --no-startup-id /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 exec --no-startup-id wallpapers.sh &
-exec --no-startup-id picom --config /home/shail/.config/i3/picom.conf &
+exec --no-startup-id picom --config $HOME/.config/i3/picom.conf &
 exec --no-startup-id parcellite &
 exec --no-startup-id nm-applet
 exec --no-startup-id mate-volume-control-status-icon &
@@ -224,13 +224,13 @@ exec --no-startup-id touchegg &
 # -------------------------------------------
 
 # -- Custom Keybindings
-bindsym $mod+o exec /home/shail/.local/bin/lock2.sh &
-bindsym $mod+p exec /home/shail/.local/bin/power-menu.sh &
+bindsym $mod+o exec $HOME/.local/bin/lock2.sh &
+bindsym $mod+p exec $HOME/.local/bin/power-menu.sh &
 bindsym $mod+bracketleft exec firefox &
 # bindsym $mod+bracketright exec google-chrome-stable &
 bindsym $mod+f exec kitty vifm &
 bindsym $mod+b exec homebank &
-bindsym $mod+Shift+Return exec /home/shail/.local/bin/config_edit.sh &
+bindsym $mod+Shift+Return exec $HOME/.local/bin/config_edit.sh &
 bindsym Print exec mate-screenshot -i &
 bindsym $mod+Print exec mate-screenshot &
 bindsym $mod+c exec code &

@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 i3lock -k -L \
--i /home/shail/Pictures/backgrounds/parrot-wallpapers/backgrounds/lorikeet.jpg \
+-i $HOME/Pictures/backgrounds/parrot-wallpapers/backgrounds/lorikeet.jpg \
 --ring-color=003E48 \
 --inside-color=281214b3 \
 --line-color=ffffff \
