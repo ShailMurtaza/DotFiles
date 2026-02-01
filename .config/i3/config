@@ -227,7 +227,6 @@ exec --no-startup-id touchegg &
 bindsym $mod+o exec $HOME/.local/bin/lock2.sh &
 bindsym $mod+p exec $HOME/.local/bin/power-menu.sh &
 bindsym $mod+bracketleft exec firefox &
-# bindsym $mod+bracketright exec google-chrome-stable &
 bindsym $mod+f exec kitty vifm &
 bindsym $mod+b exec homebank &
 bindsym $mod+Shift+Return exec $HOME/.local/bin/config_edit.sh &
@@ -245,12 +244,9 @@ bindsym $mod+Ctrl+semicolon move workspace to output next
 # Net refresh i3blocks
 bindsym $mod+n exec --no-startup-id pkill -SIGRTMIN+12 i3blocks &
 bindsym $mod+q floating enable; resize set 1103 582; move position center
-
-#  -------------------------------------------
-# bindsym $mod+n exec kitty $HOME/programming/freelancing/E-commerce-Fasion-WebApp
-# bindsym $mod+Shift+n exec kitty $HOME/programming/freelancing/E-commerce-Fasion-WebApp/run.sh
 #  -------------------------------------------
 
+# Scratchpads
 for_window [class="^SimpleScreenRecorder$"] floating enable
 for_window [class="^nfs13.exe$"] floating enable
 for_window [class="^nfs13.exe$"] move position center
