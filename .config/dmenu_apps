@@ -1,5 +1,6 @@
 Home-LCD
 Home-LCD-eDP1
+eDP1-Display
 wallpapers.sh
 homebank
 atril
@@ -13,6 +14,7 @@ prismlauncher
 lutris
 gnome-clock
 gnome-calendar
+remmina
 mate-about
 mate-disk-usage-analyzer
 mate-power-backlight-helper
