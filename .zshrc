@@ -52,6 +52,7 @@ alias server="python -m http.server"
 alias displays="watch -n 1 \"xrandr | awk '/ connected/ {printf \\\"%s %s  \\\", \\\$1, \\\$2}'\""
 
 
+export PATH="$HOME/.local/bin:$PATH"
 export NODE_OPTIONS="--dns-result-order=ipv4first"
 export NPM_PACKAGES="${HOME}/.npm-packages"
 export PATH="$PATH:$NPM_PACKAGES/bin"

@@ -1,3 +1,4 @@
+emote
 Home-LCD
 Home-LCD-eDP1
 eDP1-Display
@@ -8,13 +9,17 @@ caja
 filelight
 flameshot
 firefox
+gparted
 evolution
 pluma
 prismlauncher
 lutris
-gnome-clock
+discord
+gnome-clocks
 gnome-calendar
 remmina
+virtualbox
+qbittorrent
 mate-about
 mate-disk-usage-analyzer
 mate-power-backlight-helper
