@@ -6,6 +6,7 @@ configs+=(
 [i3 Blocks]="$HOME/.config/i3blocks/config"
 [Picom]="$HOME/.config/i3/picom.conf"
 [Kitty]="$HOME/.config/kitty/kitty.conf"
+[Dmenu]="$HOME/.config/dmenu_apps"
 )
 
 choice=$(printf "%s\n" "${!configs[@]}" | dmenu \
