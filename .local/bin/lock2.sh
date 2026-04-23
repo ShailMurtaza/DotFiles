@@ -1,18 +1,27 @@
 #!/usr/bin/bash
 
-i3lock -k -L \
--i $HOME/Pictures/backgrounds/parrot-wallpapers/backgrounds/lorikeet.jpg \
---ring-color=003E48 \
---inside-color=281214b3 \
---line-color=ffffff \
---insidewrong-color=FF000E \
---ringwrong-color=ffffff \
---ring-width=10 \
---insidever-color=3465A4 \
---indicator \
---verif-color=BABDB6 \
---time-color=ffffff \
---date-color=ffffff \
---time-str="%I:%M:%S %p" \
---date-str="%a, %d %b(%m) %Y" \
---radius=120
+swaylock \
+  -i "$HOME/Pictures/backgrounds/parrot-wallpapers/backgrounds/lorikeet.jpg" \
+  --clock \
+  --indicator \
+  --indicator-radius 120 \
+  --indicator-thickness 10 \
+  \
+  --ring-color 003E48 \
+  --key-hl-color FFFFFF \
+  --inside-color 281214B3 \
+  --inside-clear-color 281214B3 \
+  --inside-ver-color 3465A4 \
+  --inside-wrong-color FF000E \
+  \
+  --ring-ver-color 3465A4 \
+  --ring-wrong-color FFFFFF \
+  \
+  --text-color FFFFFF \
+  --text-ver-color BABDB6 \
+  --text-wrong-color FF000E \
+  \
+  --line-color 00000000 \
+  \
+  --timestr "%I:%M:%S %p" \
+  --datestr "%a, %d %b(%m) %Y"

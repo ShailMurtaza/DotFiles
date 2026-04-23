@@ -1,23 +1,21 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
+
+TERM="footclient"
 
 declare -A configs
 configs+=(
-[i3 WM]="$HOME/.config/i3/config"
-[i3 Blocks]="$HOME/.config/i3blocks/config"
-[Picom]="$HOME/.config/i3/picom.conf"
-[Kitty]="$HOME/.config/kitty/kitty.conf"
-[Dmenu]="$HOME/.config/dmenu_apps"
+  [Sway WM]="$HOME/.config/sway/config"
+  [Waybar]="$HOME/.config/waybar"
+  [Neovim]="$HOME/.config/nvim"
+  [Foot]="$HOME/.config/foot/foot.ini"
 )
 
-choice=$(printf "%s\n" "${!configs[@]}" | dmenu \
-    -nb "${COLOR_BACKGROUND:-#151515}" \
-    -nf "${COLOR_DEFAULT:-#aaaaaa}" \
-    -sf "${COLOR_HIGHLIGHT:-#589cc5}" \
-    -sb "#1a1a1a" \
-    -i -p \
-    "Configuration:" -l 10
+choice=$(printf "%s\n" "${!configs[@]}" | wofi \
+  --dmenu \
+  --prompt "Configuration:" \
+  --lines 5 \
+  --width 200 \
 )
 
-[ $? = 0 ] && kitty nvim ${configs[$choice]} & disown
-exit;
-
+[ -n "$choice" ] && $TERM nvim "${configs[$choice]}" & disown
+exit
