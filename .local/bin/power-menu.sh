@@ -3,9 +3,9 @@
 declare -A actions=(
     ["⏻ Poweroff"]="loginctl poweroff"
     [" Reboot"]="loginctl reboot"
-    [" Lock"]="~/.local/bin/lock.sh"
+    [" Lock"]="~/.local/bin/lock2.sh"
     [" Logout"]="swaymsg exit"
-    [" Suspend"]="~/.local/bin/lock.sh && sleep 0.4 && loginctl suspend"
+    [" Suspend"]="~/.local/bin/lock2.sh && sleep 0.4 && loginctl suspend"
     ["♞ Switch User"]="dm-tool switch-to-greeter"
 )
 

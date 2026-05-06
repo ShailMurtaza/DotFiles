@@ -42,7 +42,7 @@
     "custom/cpu_temp": {
         "exec": "$HOME/.local/bin/cpu_temp.sh",
         "interval": 3,
-        "format": "\uf2c9 {}",
+        "format": "\uf2c9{}",
         "tooltip": false
     },
     // sourced from modules based on config.ctl //
@@ -55,7 +55,7 @@
     "upower": {
         "icon-size": 20,
         "format": "",
-        "format-alt": "{}<span color='orange'>[{time}]</span>",
+        "format-alt": "<span color='orange'> {time} </span>",
         "tooltip": true,
         "tooltip-spacing": 20
     },
@@ -196,7 +196,7 @@
         }
     },
     "clock": {
-        "format": "{:%I:%M %p}",
+        "format": "{:%d %b %Y | %I:%M %p}",
         "rotate": 0,
         "on-click": "/usr/local/bin/ags -t ActivityCenter",
         "tooltip-format": "<tt>{calendar}</tt>",
@@ -387,13 +387,13 @@
         "max": 100,
         "rotate": 0,
         "device": "intel_backlight",
-        "scroll-step": 1,
+        "scroll-step": 1
     },
     "pulseaudio/slider": {
         "min": 5,
         "max": 100,
         "rotate": 0,
         "device": "pulseaudio",
-        "scroll-step": 1,
-    },
+        "scroll-step": 1
+    }
 }
