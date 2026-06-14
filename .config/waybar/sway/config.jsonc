@@ -16,17 +16,19 @@
     "modules-left": [
         "sway/workspaces"
     ],
+    /*
     "modules-center": [
         "custom/padd",
         "custom/l_end",
         "custom/r_end",
-        "sway/window",
+        // "sway/window",
         "custom/padd"
-    ],
+    ],*/
     "modules-right": [
         "custom/padd",
         "custom/l_end",
-        "group/expand",
+        "tray",
+        "custom/spacer",
         "network",
         "group/expand-3",
         "group/expand-2",
@@ -36,8 +38,7 @@
         "custom/cpu_temp",
         "cpu",
         "cpu#usage",
-        "clock",
-        "custom/padd"
+        "clock"
     ],
     "custom/cpu_temp": {
         "exec": "$HOME/.local/bin/cpu_temp.sh",
@@ -120,26 +121,9 @@
         "rotate": 0,
         "spacing": 3
     },
-    "group/expand": {
-        "orientation": "horizontal",
-        "drawer": {
-            "transition-duration": 600,
-            "children-class": "not-power",
-            "transition-to-left": true,
-            //  "click-to-reveal": true
-        },
-        "modules": [
-            "custom/menu",
-            "custom/spacer",
-            "tray"
-        ]
-    },
-    "custom/menu": {
-        "format": "󰅃",
-        "rotate": 90
-    },
     "sway/window": {
         "format": "{}",
+        "tooltip": false,
         "max-length": 50,
         "all-outputs": true,
         "offscreen-css": true,
@@ -148,13 +132,6 @@
             "(.*) - Mozilla Firefox": " $1",
             "(.*) - fish": "> [$1]"
         }
-    },
-    "custom/power": {
-        "format": "@{}",
-        "rotate": 0,
-        "on-click": "ags -t ControlPanel",
-        "on-click-right": "pkill ags",
-        "tooltip": true
     },
     "custom/spacer": {
         "format": "|"
@@ -196,7 +173,7 @@
         }
     },
     "clock": {
-        "format": "{:%d %b %Y | %I:%M %p}",
+        "format": "{:%d %b %Y | %a %I:%M %p}",
         "rotate": 0,
         "on-click": "/usr/local/bin/ags -t ActivityCenter",
         "tooltip-format": "<tt>{calendar}</tt>",
@@ -301,7 +278,7 @@
         "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": " ",
         "tooltip-format-disconnected": "Disconnected",
-        "on-click": "nm-connection-editor",
+        "on-click": "footclient sh -c \"sleep 0.1;nmtui\"",
         "interval": 2
     },
     "pulseaudio": {
