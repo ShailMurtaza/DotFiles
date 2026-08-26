@@ -27,17 +27,22 @@
     "modules-right": [
         "custom/padd",
         "custom/l_end",
+        "custom/netuptest",
+        "custom/spacer",
         "tray",
         "custom/spacer",
         "network",
         "group/expand-3",
         "group/expand-2",
-        "group/expand-4",
+        "upower",
+        "custom/battery-time",
+        "custom/spacer",
         "memory",
         "memory#usage",
         "custom/cpu_temp",
         "cpu",
         "cpu#usage",
+        "custom/spacer",
         "clock"
     ],
     "custom/cpu_temp": {
@@ -54,23 +59,14 @@
         "tooltip": false
     },
     "upower": {
+        "format": "{percentage}",
         "icon-size": 20,
-        "format": "",
-        "format-alt": "<span color='orange'> {time} </span>",
-        "tooltip": true,
-        "tooltip-spacing": 20
+        "tooltip": false,
+        "min-length": 4
     },
-    "group/expand-4": {
-        "orientation": "horizontal",
-        "drawer": {
-            "transition-duration": 600,
-            "children-class": "not-power",
-            "transition-to-left": true,
-            "click-to-reveal": true
-        },
-        "modules": [
-            "upower"
-        ]
+    "custom/battery-time": {
+        "exec": "$HOME/.local/bin/battery.sh",
+        "interval": 5
     },
     "custom/smallspacer": {
         "format": " "
@@ -134,7 +130,8 @@
         }
     },
     "custom/spacer": {
-        "format": "|"
+        "format": "|",
+        "tooltip": false
     },
     "sway/workspaces": {
         "format": "{}",
@@ -234,7 +231,8 @@
             "󰃠"
         ],
         "scroll-step": 1,
-        "min-length": 2
+        "min-length": 2,
+        "tooltip-format": "{percent}%"
     },
     "group/expand-2": {
         "orientation": "horizontal",
@@ -278,8 +276,15 @@
         "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": " ",
         "tooltip-format-disconnected": "Disconnected",
-        "on-click": "footclient sh -c \"sleep 0.1;nmtui\"",
+        "on-click": "footclient sh -c \"wifitui\"",
         "interval": 2
+    },
+    "custom/netuptest": {
+        "exec": "$HOME/.config/waybar/scripts/netuptest.sh",
+        "interval": 3,
+        "return-type": "json",
+        "signal": 12,
+        "on-click": "pkill -RTMIN+12 waybar"
     },
     "pulseaudio": {
         "format": "{icon}",

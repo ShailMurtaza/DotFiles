@@ -94,10 +94,8 @@ tooltip {
 }
 
 #tray menu * {
-  min-height: 16px;
-  font-weight: bold;
   font-size: 13px;
-  color: #9488e3;
+  color: #d4d4d4;
 }
 
 #tray menu separator {
@@ -105,7 +103,7 @@ tooltip {
 }
 
 #custom-spacer {
-  opacity: 0;
+  margin: 0 5px;
 }
 #custom-smallspacer {
   opacity: 0;
@@ -131,7 +129,7 @@ tooltip {
   background: rgba(23, 23, 23, 0);
   font-weight: normal;
   font-size: 20px;
-  margin: 1px 0px 0px 0px;
+  margin: 0px 5px 0px 0px;
 }
 #bluetooth,
 #custom-cliphist {
@@ -166,8 +164,6 @@ tooltip {
   font-size: 15px;
   font-weight: bold;
   font-family: "JetBrains Mono Nerd Font";
-  margin: 3px 0px 0px 0px;
-  padding-left: 10px;
   padding-right: 10px;
   border: none;
 }
@@ -175,7 +171,7 @@ tooltip {
   font-size: 20px;
   color: #6f8fdb;
   background: rgba(22, 19, 32, 0);
-  margin: 0px 0px 0px 0px;
+  margin: 0px 10px 0px 0px;
   padding-left: 3px;
   padding-right: 3px;
 }
@@ -183,6 +179,7 @@ tooltip {
   font-size: 20px;
   font-weight: normal;
   color: #915caf;
+  margin-right: 5px;
 }
 
 #cpu.usage {
@@ -204,12 +201,13 @@ tooltip {
   font-weight: normal;
   font-size: 20px;
   color: #e4c9af;
+  margin-right: 5px;
 }
 #memory.usage {
   font-weight: normal;
   font-size: 15px;
   color: #e4c9af;
-  padding-right: 5px;
+  margin-right: 10px;
   padding-left: 2px;
 }
 
@@ -222,6 +220,7 @@ tooltip {
   color: #a1bdce;
   font-weight: normal;
   font-size: 20px;
+  margin-right: 5px;
 }
 #custom-notifications,
 #custom-spotify,
@@ -268,7 +267,8 @@ tooltip {
   background-color: white;
   border: none;
   box-shadow: none;
-  margin-right: 7px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 #backlight-slider trough,
@@ -351,6 +351,22 @@ tooltip {
 
 #custom-cpu_temp {
   font-weight: normal;
-  padding-left: 5px;
-  padding-right: 5px;
+  margin-right: 10px;
+}
+
+#custom-netuptest {
+  font-size: 17px;
+  font-weight: normal;
+  margin: 0 5px 0 0;
+}
+
+#custom-netuptest.up {
+  color: #00ff00;
+}
+
+#custom-netuptest.down {
+  color: #ff0000;
+}
+#custom-battery-time {
+  color: orange;
 }
