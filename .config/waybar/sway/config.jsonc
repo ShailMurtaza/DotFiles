@@ -16,14 +16,6 @@
     "modules-left": [
         "sway/workspaces"
     ],
-    /*
-    "modules-center": [
-        "custom/padd",
-        "custom/l_end",
-        "custom/r_end",
-        // "sway/window",
-        "custom/padd"
-    ],*/
     "modules-right": [
         "custom/padd",
         "custom/l_end",
@@ -32,8 +24,8 @@
         "tray",
         "custom/spacer",
         "network",
-        "group/expand-3",
-        "group/expand-2",
+        "group/audio",
+        "group/back_light",
         "upower",
         "custom/battery-time",
         "custom/spacer",
@@ -234,28 +226,15 @@
         "min-length": 2,
         "tooltip-format": "{percent}%"
     },
-    "group/expand-2": {
+    "group/back_light": {
         "orientation": "horizontal",
-        "drawer": {
-            "transition-duration": 600,
-            "children-class": "not-power",
-            "transition-to-left": true,
-            "click-to-reveal": true
-        },
         "modules": [
             "backlight",
-            "backlight/slider",
-            "custom/smallspacer"
+            "backlight/slider"
         ]
     },
-    "group/expand-3": {
+    "group/audio": {
         "orientation": "horizontal",
-        "drawer": {
-            "transition-duration": 600,
-            "children-class": "not-power",
-            "transition-to-left": true,
-            "click-to-reveal": true
-        },
         "modules": [
             "pulseaudio",
             "pulseaudio/slider"
